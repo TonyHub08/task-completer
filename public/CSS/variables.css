@@ -1,0 +1,17 @@
+:root {
+    /* #0a0908; #22333b; #c6ac8f; #eae0d5; #5e503f */
+    --primary-color: #061c2b;
+    --secondary-color: #22333b;
+    --text-color: #91c0c9;
+    --gradient: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    --search-icon: url('/Images/light-theme/search-icon.png');
+    --profile-icon: url('/Images/light-theme/profile-icon.png');
+}
+
+.glass-theme {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px) saturate(160%);
+    box-shadow: 0px 0px 20px rgb(124, 205, 255, 0.5);
+    border: 0.25px solid white;
+    border-radius: 35px;
+}

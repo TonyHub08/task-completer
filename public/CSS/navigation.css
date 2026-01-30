@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: var(--gradient);
+    background-size: 100% 100%;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+}
+
+#navigation-container {
+    width: 80vw;
+    height: 10vh;
+    max-width: 750px;
+    margin: auto;
+    position: sticky;
+    top: 5vh;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr 5fr 1fr 1fr;
+    column-gap: 2.5%;
+    grid-template-rows: 100%;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+    padding: 0 2.5%;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#logo-container p {
+    color: var(--text-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(20px, calc(1vw + 1vh), 30px);
+}
+
+#logo-container img {
+    height: 80%;
+    aspect-ratio: 1/1;
+}
+
+#search-bar-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#search-bar-container input {
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    border: none;
+    outline: none;
+    color: var(--secondary-color);
+}
+
+#search-bar-container button {
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 0 50px 50px 0;
+    height: 60%;
+    aspect-ratio: 1/1;
+    background-image: var(--search-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+}
+
+#profile-button-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#profile-button {
+    background-image: var(--profile-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 100%;
+    height: 60%;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+#profile-button:hover {
+    box-shadow: 0 0 7.5px white;
+    transform: translateY(-5%);
+}
+
+main {
+    margin-top: 15vh;
+}
