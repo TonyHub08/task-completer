@@ -6,6 +6,7 @@
     --gradient: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     --search-icon: url('/Images/light-theme/search-icon.png');
     --profile-icon: url('/Images/light-theme/profile-icon.png');
+    --waves: url('/Images/waves.png')
 }
 
 .glass-theme {

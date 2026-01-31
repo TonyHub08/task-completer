@@ -11,6 +11,7 @@ body {
     background-image: var(--gradient);
     background-size: 100% 100%;
     color: var(--text-color);
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -18,27 +19,118 @@ body {
     width: 0;
 }
 
-#navigation-container {
-    width: 80vw;
+#navigation-opener {
     height: 10vh;
-    max-width: 750px;
+    width: fit-content;
     margin: auto;
-    position: sticky;
+    display: flex;
+    flex-direction: row;
+    position: relative;
     top: 5vh;
+    border-radius: 25px;
+    padding: 0 2.5%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#navigation-opener:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 0 20px white;
 }
 
 nav {
-    height: 10vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 4fr 1fr 5fr 1fr 1fr;
-    column-gap: 2.5%;
-    grid-template-rows: 100%;
-    flex-direction: row;
-    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
     top: 0;
-    border-radius: 25px;
-    padding: 0 2.5%;
+    left: 0;
+    backdrop-filter: blur(10px) saturate(150%);
+    transform: translateY(-100%);
+}
+
+nav a {
+    border-radius: 100% !important;
+    width: 15vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    box-shadow: 0 0 30px white;
+    transform: translateY(-5%);
+}
+
+nav a::after {
+    content: '';
+    border-radius: 100% !important;
+    width: 5vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: 0;
+    right: -15%;
+    /* Glass theme */
+    background-image: radial-gradient(circle, transparent 10%, var(--text-color));
+    backdrop-filter: blur(10px) saturate(160%);
+    box-shadow: 0px 0px 20px rgb(124, 205, 255, 0.5);
+    border: 0.25px solid white;
+    border-radius: 35px;
+}
+
+nav a::before {
+    content: '';
+    border-radius: 100% !important;
+    width: 2.5vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: 30%;
+    right: -20%;
+    animation: float 6s ease-in-out infinite;
+    /* Glass theme */
+    background-image: radial-gradient(circle, transparent, var(--text-color));
+    backdrop-filter: blur(10px) saturate(160%);
+    box-shadow: 0px 0px 20px rgb(124, 205, 255, 0.5);
+    border: 0.25px solid white;
+    border-radius: 35px;
+}
+
+@keyframes float{
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-5vh);}
+    100% {transform: translateY(0);}
+}
+
+nav #home-page-link {
+    top: 15vh;
+    left: 5vw;
+}
+
+nav #home-page-link::after {
+    animation: float 4s ease-in-out infinite;
+}
+
+nav #about-page-link {
+    top: 60vh;
+    left: 40vw;
+}
+
+nav #about-page-link::after {
+    animation: float 8s ease-in-out infinite;
+}
+
+nav #profile-page-link {
+    top: 20vh;
+    left: 70vw;
+}
+
+nav #profile-page-link::after {
+    animation: float 7s ease-in-out infinite;
 }
 
 #logo-container {

@@ -16,7 +16,7 @@
 }
 
 .information-container {
-    width: 55%;
+    width: 75%;
     height: 40vh;
     display: flex;
     flex-direction: row;
@@ -37,4 +37,9 @@
     aspect-ratio: 1/1;
     top: 5vh;
     left: 2.5vw;
+}
+
+.section {
+    width: 80vw;
+    margin: auto;
 }

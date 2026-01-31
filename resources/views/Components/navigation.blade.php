@@ -13,25 +13,26 @@
     <title>ChronoTask</title>
 </head>
 <body>
-    <div id="navigation-container">
-        <nav class="glass-theme">
-            <div id="logo-container">
-                <img src="/Images/logo-icon.png">
-                <p>ChronoTask</p>
-            </div>
-            <div></div>
-            <div id="search-bar-container">
-                <input type="text" placeholder="Search">
-                <button id="search-button"></button>
-            </div>
-            <div></div>
-            <div id="profile-button-container">
-                <button id="profile-button"></button>
-            </div>
-        </nav>
+    <div id="navigation-opener">
+        <p>MENU</p>
     </div>
+
+    <nav>
+        <a id="home-page-link" class="glass-theme">HOME</a>
+        <a id="about-page-link" class="glass-theme">ABOUT</a>
+        <a id="profile-page-link" class="glass-theme">PROFILE</a>
+    </nav>
+
     <main>
         {{ $slot }}
     </main>
 </body>
 </html>
+
+<script>
+    const navigationOpener = document.getElementById('navigation-opener');
+
+    navigationOpener.addEventListener('click', () => {
+
+    });
+</script>
