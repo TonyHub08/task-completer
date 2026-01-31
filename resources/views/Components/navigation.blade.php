@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Facades\Auth;
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +17,14 @@
     <title>ChronoTask</title>
 </head>
 <body>
-    <div id="navigation-opener">
+    <div id="navigation-opener" class="glass-theme">
         <p>MENU</p>
     </div>
 
-    <nav>
-        <a id="home-page-link" class="glass-theme">HOME</a>
+    <nav data-opened="no">
+        <a id="home-page-link" href="/home" class="glass-theme">HOME</a>
         <a id="about-page-link" class="glass-theme">ABOUT</a>
-        <a id="profile-page-link" class="glass-theme">PROFILE</a>
+        <a id="profile-page-link" href="{{ Auth::check() ? '/profile' : '/sign-in' }}" class="glass-theme">PROFILE</a>
     </nav>
 
     <main>
@@ -31,8 +35,16 @@
 
 <script>
     const navigationOpener = document.getElementById('navigation-opener');
+    const navigation = document.querySelector('nav');
 
     navigationOpener.addEventListener('click', () => {
-
+        if(navigation.dataset.opened === "no"){
+            navigation.classList.add('opened');
+            navigation.dataset.opened = "yes";
+        }
+        else{   
+            navigation.classList.remove('opened');
+            navigation.dataset.opened = "no";
+        }
     });
 </script>

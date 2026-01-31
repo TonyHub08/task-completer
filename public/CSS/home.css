@@ -43,3 +43,45 @@
     width: 80vw;
     margin: auto;
 }
+
+#information-outside-container {
+    width: 80vw;
+    margin: auto;
+    height: fit-content;
+}
+
+.information-container {
+    width: 65%;
+    height: fit-content;
+    min-height: 200px;
+    display: flex;
+    gap: 2.5vw;
+    margin-bottom: 10vh;
+    font-size: 1.25rem;
+
+}
+
+.information-container img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 25px;
+    border: 1px solid var(--secondary-color);
+}
+
+.information-container p {
+    width: 70%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.information-container:nth-child(even){
+    float: right;
+    justify-content: end;
+}
+
+#full-logo-display {
+    width: 50vw;
+    margin: auto;
+    margin-left: 25vw;
+}

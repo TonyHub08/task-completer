@@ -1,0 +1,48 @@
+form {
+    width: 40vw;
+    height: fit-content;
+    min-height: 50vh;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5%;
+}
+
+#links-container {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+    font-size: 2rem;
+}
+
+.input-group {
+    position: relative;
+    height: fit-content;
+    width: 80%;
+    margin: 10vh auto;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    padding: 1vw;
+}
+
+.input-group input:not(:placeholder-shown) + label {
+    transform: translateY(-150%);
+}
+
+.input-group input:focus + label {
+    transform: translateY(-150%);
+}
+
+.input-group label {
+    position: absolute;
+    margin: 1vw;
+    font-weight: bold;
+    transition: 0.4s;
+}

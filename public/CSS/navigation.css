@@ -25,12 +25,17 @@ body {
     margin: auto;
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: sticky;
     top: 5vh;
     border-radius: 25px;
     padding: 0 2.5%;
-    transition: 0.4s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
+    transition: 0.4s;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 9999999999;
 }
 
 #navigation-opener:hover {
@@ -44,8 +49,16 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(10px) saturate(150%);
-    transform: translateY(-100%);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 99999999;
+}
+
+nav.opened {
+    pointer-events: all;
+    opacity: 100;
 }
 
 nav a {
@@ -60,6 +73,9 @@ nav a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
     transition: 0.4s;
+    animation: float 6s ease-in-out infinite;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 nav a:hover {
@@ -212,5 +228,5 @@ nav #profile-page-link::after {
 }
 
 main {
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
