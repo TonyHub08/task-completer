@@ -6,6 +6,8 @@
     --gradient: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     --search-icon: url('/Images/light-theme/search-icon.png');
     --profile-icon: url('/Images/light-theme/profile-icon.png');
+    --closed-eye-icon: url('/Images/closed-eye-icon.png');
+    --opened-eye-icon: url('/Images/opened-eye-icon.png');
     --waves: url('/Images/waves.png')
 }
 

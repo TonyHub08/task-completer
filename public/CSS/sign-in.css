@@ -5,6 +5,7 @@ form {
     margin: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5%;
+    margin-bottom: 10vh;
 }
 
 #links-container {
@@ -45,4 +46,41 @@ form {
     margin: 1vw;
     font-weight: bold;
     transition: 0.4s;
+}
+
+#password-toggler {
+    height: 5vh;
+    aspect-ratio: 1/1;
+    background-image: var(--closed-eye-icon);
+    background-size: 100% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#password-toggler.active {
+    background-image: var(--opened-eye-icon);
+}
+
+button[type="submit"] {
+    border: 0.5px solid white;
+    box-shadow: 0 0 20px var(--text-color);
+    background-color: var(--secondary-color);
+    width: 50%;
+    aspect-ratio: 1/0.25;
+    margin-left: 25%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 0 20px white;
+    transform: translateY(-5%);
 }

@@ -25,6 +25,24 @@
         <div class="input-group">
             <input type="password" id="password-confirmation" name="password_confirmation" placeholder="">
             <label for="password-confirmation">Confirm password</label>
+            <button type="button" id="password-toggler" data-active="no"></button>
         </div>
+
+        <button type="submit">Sign-up</button>
     </form>
 </x-navigation>
+
+<script>
+    const passwordToggler = document.getElementById('password-toggler');
+
+    passwordToggler.addEventListener('click', () => {
+        if(passwordToggler.dataset.active === 'no'){
+            passwordToggler.classList.add('active');
+            passwordToggler.dataset.active = 'yes';
+        }
+        else{
+            passwordToggler.classList.remove('active');
+            passwordToggler.dataset.active = 'no';
+        }
+    })
+</script>
